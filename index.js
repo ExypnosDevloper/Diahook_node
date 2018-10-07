@@ -2,10 +2,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const{ dialogflow }=require('actions-on-google');
-const app = dialogflow({
-	debug: true
-})
+
 
 const restService = express();
 
@@ -18,10 +15,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/audio", function(req, res) {
-		app.intent("help", conv=>{
-			return conv.ask('You can count on following:\n\n1.Aasra Address:104, Sunrise Arcade, Plot No. 100, Sector 16, Koparkhairane, Navi Mumbai - 40070924 Hour Helpline 022-27546669 Office:(10am to 7pm) 022-27546667 Email: aasrahelpline@yahoo.com Contact Person: Johnson Thomas, 9820466726')
-		});
-		
+
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
     //Speech Synthesis Markup Language 
