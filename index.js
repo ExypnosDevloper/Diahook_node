@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 
 restService.post("/audio", function(req, res) {
   var speech = "";
-  switch (req.body.result.parameters.suicide.toLowerCase()) {
+  switch (req.body.queryResult.parameters.suicide.toLowerCase()) {
     //Speech Synthesis Markup Language 
     case "suicide":
       speech =
