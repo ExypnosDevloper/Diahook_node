@@ -15,9 +15,25 @@ restService.use(bodyParser.json());
 
 restService.post("/audio", function(req, res) {
   var speech = "";
-  switch (req.body.result.parameters.AudioSample.toLowerCase()) {
+  switch (req.body.result.parameters.heal.toLowerCase()) {
     //Speech Synthesis Markup Language 
-    case "music one":
+    case "suicide":
+      speech =
+        '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/peace-ca02b.appspot.com/o/test.mp3?alt=media&token=3bb5992a-d5d3-4f57-b3b4-24adff7f63fb">did not get your audio file</audio></speak>';
+      break;
+    case "end":
+      speech =
+        '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/peace-ca02b.appspot.com/o/test.mp3?alt=media&token=3bb5992a-d5d3-4f57-b3b4-24adff7f63fb">did not get your audio file</audio></speak>';
+      break;
+    case "destruct":
+      speech =
+        '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/peace-ca02b.appspot.com/o/test.mp3?alt=media&token=3bb5992a-d5d3-4f57-b3b4-24adff7f63fb">did not get your audio file</audio></speak>';
+      break;
+    case "finish":
+      speech =
+        '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/peace-ca02b.appspot.com/o/test.mp3?alt=media&token=3bb5992a-d5d3-4f57-b3b4-24adff7f63fb">did not get your audio file</audio></speak>';
+      break;
+    case "kill":
       speech =
         '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/peace-ca02b.appspot.com/o/test.mp3?alt=media&token=3bb5992a-d5d3-4f57-b3b4-24adff7f63fb">did not get your audio file</audio></speak>';
       break;
